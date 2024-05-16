@@ -1,3 +1,19 @@
+---
+version: 3
+images:
+  base_image:
+    name: quay.io/fedora/fedora:latest
+dependencies:
+  ansible_core:
+    package_pip: ansible-core
+  ansible_runner:
+    package_pip: ansible-runner
+  system:
+    - openssh-clients
+    - sshpass
+options:
+  package_manager_path: /usr/bin/dnf
+
 # ---
 # version: 1
 # build_arg_defaults:
@@ -15,21 +31,21 @@
 #    RUN pip3 install --upgrade pip setuptools
 #  append:
 #    - RUN ls -la /etc
----
-version: 3
-images:
-  base_image:
-    name: quay.io/fedora/fedora:latest
-dependencies:
-  galaxy: requirements.yml
-  python: requirements.txt
-  ansible_core:
-    package_pip: ansible-core
-  ansible_runner:
-    package_pip: ansible-runner
-  system:
-    - openssh-clients
-    - sshpass
-options:
-  package_manager_path: /usr/bin/dnf
+# ---
+# version: 3
+# images:
+#   base_image:
+#     name: quay.io/fedora/fedora:latest
+# dependencies:
+#   galaxy: requirements.yml
+#   python: requirements.txt
+#   ansible_core:
+#     package_pip: ansible-core
+#   ansible_runner:
+#     package_pip: ansible-runner
+#   system:
+#     - openssh-clients
+#     - sshpass
+# options:
+#   package_manager_path: /usr/bin/dnf
   
