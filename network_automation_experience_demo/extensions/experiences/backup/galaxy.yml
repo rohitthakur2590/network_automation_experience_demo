@@ -1,0 +1,15 @@
+---
+namespace: ansible
+name: network_automation_experience_demo
+version: 0.0.1
+readme: README.md
+authors:
+  - Rohit Thakur <rothakur@redhat.com>
+
+description: Ansible Network Automation Experiences Demo
+license_file: LICENSE
+tags: []
+
+repository: https://github.com/rohitthakur2590/network_automation_demo
+documentation: https://github.com/rohitthakur2590/network_automation_demo
+homepage: https://github.com/rohitthakur2590/network_automation_demo
